@@ -1,17 +1,18 @@
 /**
- * YITBAREK SISAY — PORTFOLIO APPLICATION LOGIC
+ * YITBAREK SISAY — PORTFOLIO APPLICATION CONTROLLER
  * Senior Architect & Interior Designer (Addis Ababa, Ethiopia)
+ * Webflow Client-First Compatible JavaScript Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------------
-  // 1. DATA STORE: ARCHITECTURAL PROJECTS
+  // 1. DATA STORE: CONTEXTUAL ETHIOPIAN ARCHITECTURAL PROJECTS
   // -------------------------------------------------------------------------
   const projectsData = [
     {
       id: 'prj-01',
       code: 'PRJ-01',
-      title: 'Entoto Cultural Pavilion & Research Center',
+      title: 'Entoto Cultural Pavilion & Research Archive',
       category: 'public-cultural',
       typology: 'Public & Cultural Landmark',
       year: '2024',
@@ -20,12 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Lead Architect & BIM Specialist',
       software: 'Revit, D5 Render, V-Ray, AutoCAD',
       status: 'Completed Design & Tender',
-      summary: 'A landmark cultural repository celebrating Ethiopian spatial heritage through contemporary rammed earth, timber louvers, and parametric daylight envelopes.',
-      conceptTitle: 'Topographic Integration & Passive Microclimate',
-      conceptP1: 'The architecture emerges from the natural slope of the plateau, utilizing locally sourced basalt and compressed earth blocks to anchor the massing. The deep-set loggias shield the interior galleries from Addis Ababa’s intense high-altitude solar radiation while capturing northern ambient daylight.',
-      conceptP2: 'A central atrium acts as a natural thermal chimney, inducing passive stack ventilation across all exhibition levels and reducing active HVAC energy requirements by 42%.',
-      tags: ['Passive Ventilation', 'Parametric Louvers', 'BIM LOD 350', 'Cultural Heritage'],
-      drawingTitle: 'LEVEL +01 MAIN GALLERIES & AUDITORIUM PLAN',
+      summary: 'A hillside cultural archive synthesizing Lalibela subtractive rock-carving and Aksumite timber-stone louvers with modern parametric daylight envelopes.',
+      conceptTitle: 'Subtractive Basalt Massing & Stack Microclimate',
+      conceptP1: 'Emerging from the volcanic terrain of Entoto mountain, the lower exhibition halls are excavated directly into native basalt rock, utilizing substantial earth thermal mass to maintain stable gallery temperatures without artificial cooling.',
+      conceptP2: 'The upper timber canopy re-interprets the Aksumite tie-beam system (*re’ese anbasā*), cantilevering parametric eucalyptus shading fins that filter high-altitude ultraviolet daylight into diffuse 350-lux illumination.',
+      tags: ['Subtractive Massing', 'Aksumite Joinery', 'Passive Geothermal', 'BIM LOD 350'],
+      drawingTitle: 'LEVEL +01 MONOLITHIC GALLERIES & ATRIUM PLAN',
       sheetNum: 'A-201',
       drawingType: 'cultural-plan',
       renderType: 'cultural-exterior'
@@ -33,21 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'prj-02',
       code: 'PRJ-02',
-      title: 'Bole Luxury Penthouse & Sky Lounge',
+      title: 'Bole Sky Penthouse & Harari Nadaba Salon',
       category: 'interior',
-      typology: 'Interior Architecture & Bespoke Millwork',
+      typology: 'Luxury Interior & Bespoke Millwork',
       year: '2024',
       scale: '1:50 @ A1',
       site: 'Bole District, Addis Ababa',
-      role: 'Senior Interior Designer & Project Lead',
+      role: 'Senior Interior Designer & Lead',
       software: 'Revit, 3ds Max, V-Ray, Photoshop',
       status: 'Completed & Handed Over',
-      summary: 'A dual-level penthouse interior balancing refined Ethiopian eucalyptus woodwork with brushed black steel, bespoke ambient illumination, and panoramic metropolitan views.',
-      conceptTitle: 'Material Tactility & Fluid Spatial Boundaries',
-      conceptP1: 'By removing non-structural partition walls, the primary living zone opens into an expansive light-filled gallery. Custom-crafted fluted timber partitions allow flexible acoustic privacy between the salon and private study without sacrificing visual depth.',
-      conceptP2: 'Indirect cove lighting concealed within drop-soffits casts a warm 2700K illumination across textured travertine feature walls, producing an intimate sanctuary suspended above the city.',
-      tags: ['Custom Millwork', 'Acoustic Partitions', 'Indirect Lighting', 'Luxury Residential'],
-      drawingTitle: 'PENTHOUSE LEVEL 14 DETAILED INTERIOR REFLECTED CEILING PLAN',
+      summary: 'A high-altitude penthouse interior re-interpreting the historic Harari Nadaba multi-tiered seating platform through oiled Ethiopian olive wood and concealed cove lighting.',
+      conceptTitle: 'Nadaba Spatial Platforms & Ethiopian Woodwork',
+      conceptP1: 'In homage to Harar Jugol’s five-tier interior seating typology, the primary salon features stepped timber platforms and recessed plaster wall niches (*tāqēt*) that delineate conversation, contemplation, and formal hosting zones.',
+      conceptP2: 'Custom-fluted eucalyptus screens filter natural daylight while concealing acoustic dampening panels, creating an intimate sanctuary floating above the Addis Ababa skyline.',
+      tags: ['Harari Nadaba', 'Ethiopian Olive Wood', 'Recessed Niches', 'Acoustic Millwork'],
+      drawingTitle: 'PENTHOUSE LEVEL 14 REFLECTED CEILING & MILLWORK PLAN',
       sheetNum: 'I-104',
       drawingType: 'interior-plan',
       renderType: 'interior-render'
@@ -55,21 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'prj-03',
       code: 'PRJ-03',
-      title: 'Hawassa Regional Pediatric & Maternal Clinic',
+      title: 'Hawassa Pediatric Campus & Bamboo Shading Canopies',
       category: 'healthcare-schools',
-      typology: 'Healthcare & Specialized Clinical Facility',
+      typology: 'Healthcare & Specialized Clinical Campus',
       year: '2023',
       scale: '1:500 @ A0',
       site: 'Hawassa, Sidama Region',
       role: 'Principal Architect & Medical Planner',
       software: 'ArchiCAD, Lumion, SketchUp, AutoCAD',
       status: 'Under Construction (Phase 2)',
-      summary: 'A biophilic pediatric healthcare campus engineered with sterile zoning, landscaped healing courtyards, and solar-assisted natural air circulation.',
-      conceptTitle: 'Sterile Circulation & Biophilic Healing Courtyards',
-      conceptP1: 'The hospital layout separates public waiting concourses from clean clinical corridors, eliminating contamination vectors while providing every patient room direct views and cross-ventilation through lush inner courtyards.',
-      conceptP2: 'Shaded solar canopies provide 60% of daily electricity needs while creating continuous weather-protected ambulatory walkways connecting diagnostics, wards, and surgical suites.',
-      tags: ['Medical Zoning', 'Biophilic Design', 'Clean Air Corridors', 'Healthcare BIM'],
-      drawingTitle: 'SURGICAL WING & PEDIATRIC INPATIENT BLOCK GENERAL PLAN',
+      summary: 'A biophilic hospital campus combining Sidama radial bamboo structural geometries with sterile clinical zoning and landscaped healing courtyards.',
+      conceptTitle: 'Indigenous Sidama Canopies & Sterile Zoning',
+      conceptP1: 'The master plan organizes pediatric inpatient wards around radial open-air healing gardens inspired by indigenous Sidama bamboo construction, ensuring 100% natural cross-ventilation across patient corridors.',
+      conceptP2: 'Parabolic timber solar canopies protect ambulatory walkways from equatorial sun and seasonal rains while supporting a 120kW rooftop solar photovoltaic array.',
+      tags: ['Sidama Bamboo Geometry', 'Clean Air Corridors', 'Healing Courtyards', 'Healthcare BIM'],
+      drawingTitle: 'PEDIATRIC WING & SURGICAL SUITE COMPOSITE MASTERPLAN',
       sheetNum: 'H-302',
       drawingType: 'hospital-plan',
       renderType: 'hospital-exterior'
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'prj-04',
       code: 'PRJ-04',
-      title: 'Kazanchis Sustainable Mixed-Use Highrise',
+      title: 'Kazanchis Aksum Stele Mixed-Use Highrise',
       category: 'residential',
       typology: 'High-Density Residential & Commercial Podium',
       year: '2023',
@@ -86,11 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Project Architect & Computational Designer',
       software: 'Revit, Rhino + Grasshopper, V-Ray',
       status: 'Schematic Design Approved',
-      summary: 'A 26-storey urban tower integrating modular multi-family apartments, vertical sky gardens, and an active retail pedestrian arcade.',
-      conceptTitle: 'Modular Verticality & Wind-Optimized Aerodynamics',
-      conceptP1: 'Parametric aerodynamic tapering reduces lateral wind loads by 18%, allowing a lighter structural concrete core. Stepped sky gardens every four levels foster communal social interactions among residents.',
-      conceptP2: 'Double-glazed facade modules with integrated solar shading louvers respond dynamically to eastern morning solar gains and western afternoon thermal peaks.',
-      tags: ['Highrise BIM', 'Parametric Facade', 'Sky Gardens', 'Mixed-Use'],
+      summary: 'A 26-storey urban tower translating the vertical monumentality and stepped podiums of the Aksumite stelae into a climate-responsive residential highrise.',
+      conceptTitle: 'Parametric Stele Verticality & Sky Gardens',
+      conceptP1: 'The tower massing pays homage to the Great Stele of Aksum, featuring vertical relief recesses and stepped setbacks that accommodate communal sky gardens every four storeys.',
+      conceptP2: 'Parametrically optimized ceramic fritted glass panels dynamically balance internal daylight levels with high-altitude solar heat gain reduction.',
+      tags: ['Aksumite Stele Profile', 'Parametric Facade', 'Sky Gardens', 'Highrise BIM'],
       drawingTitle: 'TYPICAL RESIDENTIAL LEVEL (+08 TO +18) UNIT MATRIX',
       sheetNum: 'A-412',
       drawingType: 'tower-plan',
@@ -99,20 +100,20 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'prj-05',
       code: 'PRJ-05',
-      title: 'Old Airport Bespoke Courtyard Villa',
+      title: 'Old Airport Monolithic Courtyard Villa',
       category: 'residential',
-      typology: 'Private Luxury Residential Sanctuary',
+      typology: 'Private Luxury Residential Compound',
       year: '2022',
       scale: '1:100 @ A1',
       site: 'Old Airport District, Addis Ababa',
       role: 'Principal Architect & Site Supervisor',
       software: 'Revit, Lumion, AutoCAD',
       status: 'Completed & Occupied',
-      summary: 'A minimalist private residence organized around a serene central water court, framing mature indigenous trees with board-formed concrete and warm local timber.',
-      conceptTitle: 'Introverted Sanctuary & Seamless Thresholds',
-      conceptP1: 'Designed for privacy in a dense urban neighborhood, the exterior perimeter presents quiet masonry walls, while the interior unfolds into open glass curtain walls embracing the central courtyard reflection pool.',
-      conceptP2: 'Cantilevered roof planes hover over deep overhangs, preventing rain splash during Kiremt monsoon seasons and casting dynamic geometric shadow patterns throughout the day.',
-      tags: ['Board-Formed Concrete', 'Reflecting Pool', 'Courtyard Typology', 'Bespoke Residence'],
+      summary: 'A secluded private residence organized around a serene central water court, pairing board-formed volcanic concrete with warm local wanza timber.',
+      conceptTitle: 'Introverted Sanctuary & Water Court Thresholds',
+      conceptP1: 'Embracing the introverted vernacular of traditional Ethiopian walled compounds (*ghebbi*), the villa turns inward toward an acoustic reflection pool that naturally humidifies dry winter breezes.',
+      conceptP2: 'Deep cantilevered roof overhangs protect floor-to-ceiling glass apertures from Kiremt monsoon rains while creating seamless transitions between indoor salons and outdoor veranda terraces.',
+      tags: ['Courtyard Ghebbi', 'Volcanic Concrete', 'Wanza Timber', 'Bespoke Residence'],
       drawingTitle: 'GROUND LEVEL PLAN & LANDSCAPE THRESHOLD SCHEMATIC',
       sheetNum: 'V-101',
       drawingType: 'villa-plan',
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       id: 'prj-06',
       code: 'PRJ-06',
-      title: 'Addis International STEM Academy',
+      title: 'Addis International STEM Academy & Fasil Vaults',
       category: 'healthcare-schools',
       typology: 'Educational & Research Campus',
       year: '2022',
@@ -130,11 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Lead Architectural Consultant',
       software: 'Revit, D5 Render, ArchiCAD',
       status: 'Completed & Commissioned',
-      summary: 'An interactive learning environment featuring modular maker-laboratories, tiered amphitheaters, and solar roof pavilions designed to inspire technological innovation.',
-      conceptTitle: 'Flexible Learning Hubs & Daylight Glazing',
-      conceptP1: 'A spine of collaborative break-out areas interconnects physics, robotics, and biology laboratories, encouraging interdisciplinary exploration and spontaneous student interactions.',
-      conceptP2: 'Acoustic baffle ceilings and sawtooth skylights deliver glare-free northern daylight evenly across all 32 smart classrooms.',
-      tags: ['Educational Campus', 'Acoustic Baffles', 'Sawtooth Skylights', 'BIM Coordination'],
+      summary: 'An interactive polytechnic institute drawing on 17th-century Gondarine stone arches and vaulted atriums for passive acoustics and collaborative innovation.',
+      conceptTitle: 'Gondar Vaulted Atriums & Smart Laboratories',
+      conceptP1: 'A soaring central atrium utilizes contemporary catenary stone arches inspired by Gondar’s Fasil Ghebbi, delivering exceptional natural acoustic clarity for amphitheater lectures and symposiums.',
+      conceptP2: 'Sawtooth roof clerestories harvest glare-free northern ambient light, illuminating 32 robotics, biology, and computational fabrication laboratories.',
+      tags: ['Gondar Stone Arches', 'Sawtooth Skylights', 'Makerspace Labs', 'BIM Coordination'],
       drawingTitle: 'SCIENCE PAVILION & MAKERSPACE COMPOSITE PLAN',
       sheetNum: 'E-205',
       drawingType: 'school-plan',
@@ -143,8 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // -------------------------------------------------------------------------
-  // 2. SVG ARCHITECTURAL RENDER GENERATOR
-  // (Generates crisp, precise, vector architectural drawings & 3D renders)
+  // 2. VECTOR ARCHITECTURAL ARTWORK GENERATOR
   // -------------------------------------------------------------------------
   function generateSvgArtwork(type, title) {
     const safeTitle = title || 'ARCHITECTURAL VISUALIZATION';
@@ -153,26 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'cultural-exterior':
       case 'cultural-plan':
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid_${Math.random().toString(36).substr(2, 9)}" width="24" height="24" patternUnits="userSpaceOnUse">
-                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.1"/>
-              </pattern>
-            </defs>
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            <rect width="100%" height="100%" fill="url(#grid_pattern)" opacity="0.4" />
-            
-            <!-- Structural Massing & Louvers -->
             <g stroke="currentColor" stroke-width="1.2">
               <path d="M60,420 L740,420" stroke-width="1.5" />
-              <!-- Plateau Sloping Base -->
               <path d="M60,420 L240,320 L580,320 L740,420" fill="var(--panel-elevated)" opacity="0.6" stroke-dasharray="3 3"/>
               
-              <!-- Cantilevered Gallery Wings -->
+              <!-- Cantilevered Gallery Wings with Aksumite Louver Rhythm -->
               <rect x="140" y="160" width="280" height="160" fill="var(--panel-elevated)" stroke="var(--text-primary)" stroke-width="1.5"/>
               <rect x="380" y="110" width="280" height="210" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1.5"/>
               
-              <!-- Parametric Louver Blades -->
               <g stroke="var(--accent)" stroke-width="1" opacity="0.8">
                 ${Array.from({length: 18}).map((_, i) => `
                   <line x1="${160 + i * 14}" y1="180" x2="${160 + i * 14}" y2="300" />
@@ -180,17 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('')}
               </g>
 
-              <!-- Central Glass Atrium Lantern -->
               <polygon points="340,70 440,70 420,110 360,110" fill="var(--panel-elevated)" stroke="var(--accent)" stroke-width="1.5"/>
               <line x1="390" y1="50" x2="390" y2="70" stroke="var(--accent)" stroke-width="1" />
               <circle cx="390" cy="50" r="3" fill="var(--accent)"/>
             </g>
 
-            <!-- Dimension & Axis Annotations -->
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" stroke="none">
-              <text x="30" y="30">// ELEVATION STUDY — NORTH-EAST ORIENTATION</text>
-              <text x="140" y="445">AXIS 01</text>
-              <text x="380" y="445">AXIS 02 [ATRIUM]</text>
+              <text x="30" y="30">// ENTOTO CULTURAL PAVILION — ELEVATION STUDY</text>
+              <text x="140" y="445">AXIS 01 [LALIBELA TRENCH]</text>
+              <text x="380" y="445">AXIS 02 [ATRIUM CORE]</text>
               <text x="660" y="445">AXIS 03</text>
               <text x="700" y="115" fill="var(--accent)">+18.50m ROOF</text>
               <text x="700" y="165" fill="var(--accent)">+12.00m MEZZANINE</text>
@@ -202,46 +190,37 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'interior-render':
       case 'interior-plan':
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            
-            <!-- Interior 1-Point Perspective Grid -->
             <g stroke="currentColor" stroke-width="1" opacity="0.4">
-              <!-- Vanishing Point Convergence -->
               <line x1="0" y1="0" x2="400" y2="240" />
               <line x1="800" y1="0" x2="400" y2="240" />
               <line x1="0" y1="500" x2="400" y2="240" />
               <line x1="800" y1="500" x2="400" y2="240" />
-              
-              <!-- Back Wall -->
               <rect x="260" y="160" width="280" height="160" fill="var(--panel-elevated)" stroke="var(--text-primary)" stroke-width="1.5"/>
             </g>
 
-            <!-- Architectural Ceiling Dropped Soffit & Linear Cove Lighting -->
+            <!-- Harari Nadaba Platform Geometry & Recessed Niches -->
             <g stroke="var(--accent)" stroke-width="1.2">
               <polygon points="120,40 680,40 600,120 200,120" fill="var(--bg-primary)" stroke="var(--accent)" />
               <line x1="220" y1="120" x2="580" y2="120" stroke="var(--accent)" stroke-width="2" />
-              <line x1="140" y1="40" x2="220" y2="120" stroke-dasharray="2 2"/>
-              <line x1="660" y1="40" x2="580" y2="120" stroke-dasharray="2 2"/>
+              
+              <!-- Recessed Wall Niches (Tāqēt) -->
+              <rect x="290" y="190" width="40" height="60" fill="var(--panel-bg)" stroke="var(--accent)"/>
+              <rect x="350" y="190" width="40" height="60" fill="var(--panel-bg)" stroke="var(--accent)"/>
+              <rect x="410" y="190" width="40" height="60" fill="var(--panel-bg)" stroke="var(--accent)"/>
+              <rect x="470" y="190" width="40" height="60" fill="var(--panel-bg)" stroke="var(--accent)"/>
             </g>
 
-            <!-- Custom Millwork Fluted Partitions & Seating Lounge Volume -->
+            <!-- Raised Nadaba Seating Matrix -->
             <g stroke="var(--text-primary)" stroke-width="1.2">
-              <!-- Left Fluted Screen -->
-              <rect x="140" y="180" width="70" height="260" fill="var(--panel-elevated)" />
-              ${Array.from({length: 6}).map((_, i) => `
-                <line x1="${145 + i * 10}" y1="180" x2="${145 + i * 10}" y2="440" stroke="var(--accent)" stroke-width="0.8"/>
-              `).join('')}
-
-              <!-- Central Minimalist Low Hearth & Coffee Table -->
-              <polygon points="300,340 500,340 540,400 260,400" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
-              <polygon points="260,400 540,400 540,420 260,420" fill="var(--bg-primary)" stroke="var(--text-primary)"/>
+              <polygon points="200,340 600,340 680,430 120,430" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
+              <polygon points="260,370 540,370 570,410 230,410" fill="var(--bg-primary)" stroke="var(--accent)"/>
             </g>
 
-            <!-- Annotations -->
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" stroke="none">
-              <text x="30" y="30">// INTERIOR SECTIONAL PERSPECTIVE — BOLE PENTHOUSE</text>
-              <text x="30" y="470">MATERIAL: EUCALYPTUS WOODWORK / FLUTED BLACK STEEL / TRAVERTINE</text>
+              <text x="30" y="30">// BOLE PENTHOUSE — HARARI NADABA SEATING PERSPECTIVE</text>
+              <text x="30" y="470">MATERIAL: ETHIOPIAN OLIVE TIMBER / FLUTED BLACK STEEL / TRAVERTINE</text>
               <text x="590" y="115" fill="var(--accent)">COVE LIGHTING: 2700K</text>
             </g>
           </svg>
@@ -250,41 +229,27 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'hospital-exterior':
       case 'hospital-plan':
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            
-            <!-- Campus Courtyard Orthographic CAD Plan -->
             <g stroke="currentColor" stroke-width="1.2">
-              <!-- Clean Air Corridor Outer Envelope -->
               <rect x="80" y="80" width="640" height="340" stroke="var(--text-primary)" stroke-width="1.5" stroke-dasharray="4 2"/>
-              
-              <!-- Pediatric Wing A -->
               <rect x="120" y="110" width="200" height="110" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
-              <!-- Maternity Wing B -->
               <rect x="480" y="110" width="200" height="110" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
-              
-              <!-- Surgical Suite C -->
               <rect x="120" y="270" width="200" height="110" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
-              <!-- Diagnostics Wing D -->
               <rect x="480" y="270" width="200" height="110" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
               
-              <!-- Central Biophilic Courtyard & Covered Pergola -->
+              <!-- Sidama Radial Bamboo Canopy Structure -->
               <circle cx="400" cy="245" r="50" fill="var(--bg-primary)" stroke="var(--accent)" stroke-width="1.5"/>
               <circle cx="400" cy="245" r="35" stroke="var(--accent)" stroke-dasharray="2 2"/>
-              
-              <!-- Connecting Glazed Bridges -->
-              <rect x="320" y="150" width="160" height="30" fill="var(--bg-primary)" stroke="var(--accent)"/>
-              <rect x="320" y="310" width="160" height="30" fill="var(--bg-primary)" stroke="var(--accent)"/>
-              <line x1="400" y1="110" x2="400" y2="380" stroke="var(--accent)" stroke-dasharray="2 2"/>
+              <line x1="350" y1="245" x2="450" y2="245" stroke="var(--accent)"/>
+              <line x1="400" y1="195" x2="400" y2="295" stroke="var(--accent)"/>
             </g>
 
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" stroke="none">
-              <text x="30" y="30">// SCHEMATIC MASTERPLAN — BIOPHILIC CIRCULATION</text>
-              <text x="140" y="170">WARD A (PEDIATRIC)</text>
-              <text x="500" y="170">WARD B (MATERNITY)</text>
-              <text x="140" y="330">SURGERY &amp; ICU</text>
-              <text x="500" y="330">LABS &amp; DIAGNOSTICS</text>
-              <text x="360" y="250" fill="var(--accent)">HEALING ATRIUM</text>
+              <text x="30" y="30">// HAWASSA PEDIATRIC CAMPUS — BIOPHILIC BAMBOO SCHEMATIC</text>
+              <text x="140" y="170">PEDIATRIC WING A</text>
+              <text x="500" y="170">MATERNITY WING B</text>
+              <text x="360" y="250" fill="var(--accent)">BAMBOO CANOPY</text>
             </g>
           </svg>
         `;
@@ -292,43 +257,26 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'tower-render':
       case 'tower-plan':
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            
-            <!-- Highrise Elevation / Tapering Massing -->
             <g stroke="currentColor" stroke-width="1.2">
-              <!-- Ground Plane -->
               <line x1="50" y1="440" x2="750" y2="440" stroke-width="1.5"/>
-              
-              <!-- Podium Base -->
               <rect x="220" y="360" width="360" height="80" fill="var(--panel-elevated)" stroke="var(--text-primary)" stroke-width="1.5"/>
               
-              <!-- Tower Body with Setbacks -->
+              <!-- Aksum Stele Tapering Profile -->
               <path d="M260,360 L280,180 L310,60 L490,60 L520,180 L540,360 Z" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1.5"/>
               
-              <!-- Sky Garden Cutouts -->
               <rect x="300" y="190" width="200" height="30" fill="var(--panel-elevated)" stroke="var(--accent)" stroke-width="1.2"/>
               <rect x="330" y="90" width="140" height="24" fill="var(--panel-elevated)" stroke="var(--accent)" stroke-width="1.2"/>
               
-              <!-- Facade Vertical Mullions -->
-              <g stroke="var(--accent)" stroke-width="0.8" opacity="0.6">
-                ${Array.from({length: 12}).map((_, i) => `
-                  <line x1="${290 + i * 18}" y1="230" x2="${290 + i * 18}" y2="350" />
-                  <line x1="${315 + i * 14}" y1="120" x2="${315 + i * 14}" y2="180" />
-                `).join('')}
-              </g>
-
-              <!-- Spire / Crown -->
               <line x1="400" y1="20" x2="400" y2="60" stroke="var(--accent)" stroke-width="1.5"/>
               <circle cx="400" cy="20" r="3" fill="var(--accent)"/>
             </g>
 
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" stroke="none">
-              <text x="30" y="30">// TOWER MASSING &amp; SOLAR ENVELOPE [26 STOREYS]</text>
+              <text x="30" y="30">// KAZANCHIS AKSUM STELE PROFILE — 26 STOREYS</text>
               <text x="560" y="70" fill="var(--accent)">+108.00m CROWN</text>
               <text x="560" y="205" fill="var(--accent)">+52.00m SKY GARDEN</text>
-              <text x="590" y="375" fill="var(--accent)">+12.00m PODIUM</text>
-              <text x="240" y="410">COMMERCIAL ARCADE</text>
             </g>
           </svg>
         `;
@@ -336,59 +284,41 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'villa-render':
       case 'villa-plan':
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            
-            <!-- Courtyard Villa Axonometric Section -->
             <g stroke="currentColor" stroke-width="1.2">
               <path d="M120,380 L400,450 L680,380 L400,310 Z" fill="none" stroke-dasharray="3 3" opacity="0.4"/>
-              
-              <!-- Outer Shading Canopies -->
               <polygon points="160,200 400,260 640,200 400,140" fill="var(--panel-elevated)" stroke="var(--text-primary)" stroke-width="1.5"/>
-              
-              <!-- Cantilever Roof Slab -->
               <polygon points="140,190 400,250 660,190 400,130" fill="var(--bg-primary)" stroke="var(--accent)" stroke-width="1.5"/>
-              
-              <!-- Inner Courtyard Opening -->
               <polygon points="340,200 400,215 460,200 400,185" fill="var(--panel-bg)" stroke="var(--accent)"/>
-              
-              <!-- Glass Enclosure Walls -->
               <line x1="200" y1="210" x2="200" y2="350" stroke="var(--accent)" stroke-width="1"/>
               <line x1="600" y1="210" x2="600" y2="350" stroke="var(--accent)" stroke-width="1"/>
-              <line x1="400" y1="260" x2="400" y2="400" stroke="var(--text-primary)" stroke-width="1.5"/>
             </g>
 
             <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" stroke="none">
-              <text x="30" y="30">// AXONOMETRIC COURTYARD &amp; REFLECTION POOL</text>
-              <text x="30" y="470">OLD AIRPORT RESIDENCE // BOARD-FORMED CONCRETE &amp; WATER COURT</text>
+              <text x="30" y="30">// OLD AIRPORT RESIDENCE — GHEBBI WATER COURT SCHEMATIC</text>
             </g>
           </svg>
         `;
 
       default:
         return `
-          <svg viewBox="0 0 800 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 800 500" class="arch_svg_artwork" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="var(--panel-bg)" />
-            <g stroke="currentColor" stroke-width="1.2" opacity="0.7">
-              <rect x="100" y="100" width="600" height="300" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
-              <line x1="100" y1="100" x2="700" y2="400" stroke-dasharray="4 4"/>
-              <line x1="700" y1="100" x2="100" y2="400" stroke-dasharray="4 4"/>
-              <circle cx="400" cy="250" r="80" stroke="var(--accent)" stroke-width="1.5"/>
-            </g>
-            <g font-family="JetBrains Mono, monospace" font-size="10" fill="var(--accent)" text-anchor="middle">
-              <text x="400" y="255">${safeTitle.toUpperCase()}</text>
-            </g>
+            <rect x="100" y="100" width="600" height="300" fill="var(--panel-elevated)" stroke="var(--text-primary)"/>
+            <circle cx="400" cy="250" r="80" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="400" y="255" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--accent)" text-anchor="middle">${safeTitle.toUpperCase()}</text>
           </svg>
         `;
     }
   }
 
   // -------------------------------------------------------------------------
-  // 3. RENDER WORKS GRID
+  // 3. RENDER SELECTED WORKS GRID
   // -------------------------------------------------------------------------
   const projectsGrid = document.getElementById('projectsGrid');
   const projectCountDisplay = document.getElementById('projectCountDisplay');
-  const workFilters = document.querySelectorAll('.filter-btn');
+  const workFilters = document.querySelectorAll('.filter_button');
 
   function renderProjects(filter = 'all') {
     if (!projectsGrid) return;
@@ -402,31 +332,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     projectsGrid.innerHTML = filtered.map(project => `
-      <article class="project-card" data-project-id="${project.id}" role="button" tabindex="0" aria-label="View project ${project.title}">
-        <div class="project-card-image-wrap sheet-frame" data-interactive-blueprint="true">
-          <span class="crop-mark crop-tl"></span>
-          <span class="crop-mark crop-tr"></span>
-          <span class="crop-mark crop-bl"></span>
-          <span class="crop-mark crop-br"></span>
+      <article class="project_card" data-project-id="${project.id}" role="button" tabindex="0" aria-label="View project ${project.title}">
+        <div class="project_card_image_wrap drafting_sheet_frame" data-interactive-blueprint="true">
+          <span class="crop_mark crop_tl"></span>
+          <span class="crop_mark crop_tr"></span>
+          <span class="crop_mark crop_bl"></span>
+          <span class="crop_mark crop_br"></span>
           
-          <div class="blueprint-grid-overlay"></div>
+          <div class="blueprint_grid_overlay"></div>
           
-          <div class="render-canvas">
+          <div class="render_canvas_container">
             ${generateSvgArtwork(project.renderType, project.title)}
           </div>
 
-          <div class="render-badge mono-label">RENDER PLACEHOLDER</div>
+          <div class="render_badge text-style-mono text-size-tiny">RENDER PLACEHOLDER</div>
         </div>
 
-        <div class="project-card-meta-row mono-label">
-          <span class="prj-id">${project.code}</span>
-          <span class="prj-typology">${project.typology}</span>
+        <div class="project_card_meta_row text-style-mono text-size-tiny">
+          <span class="text-color-accent">${project.code}</span>
+          <span class="text-color-secondary">${project.typology}</span>
         </div>
 
-        <h3 class="project-card-title">${project.title}</h3>
-        <p class="project-card-excerpt">${project.summary}</p>
+        <h3 class="project_card_title">${project.title}</h3>
+        <p class="project_card_excerpt">${project.summary}</p>
         
-        <div class="project-specs-inline mono-label">
+        <div class="project_specs_inline text-style-mono text-size-tiny">
           <span>YEAR: ${project.year}</span>
           <span>&bull;</span>
           <span>STATUS: ${project.status}</span>
@@ -435,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
 
     // Attach click listeners to cards
-    document.querySelectorAll('.project-card').forEach(card => {
+    document.querySelectorAll('.project_card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.getAttribute('data-project-id');
         navigateToProject(id);
@@ -458,10 +388,10 @@ document.addEventListener('DOMContentLoaded', () => {
   workFilters.forEach(btn => {
     btn.addEventListener('click', () => {
       workFilters.forEach(b => {
-        b.classList.remove('active');
+        b.classList.remove('is-active');
         b.setAttribute('aria-selected', 'false');
       });
-      btn.classList.add('active');
+      btn.classList.add('is-active');
       btn.setAttribute('aria-selected', 'true');
       const filterValue = btn.getAttribute('data-filter');
       renderProjects(filterValue);
@@ -529,7 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
     projectDetailView.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Update document title
     document.title = `${project.title} — Yitbarek Sisay | Architecture`;
   }
 
@@ -545,7 +474,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjectDetail(id);
   }
 
-  // Next Project Click
   if (nextProjectStrip) {
     nextProjectStrip.addEventListener('click', () => {
       const nextIndex = (currentProjectIndex + 1) % projectsData.length;
@@ -553,7 +481,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Back Button Click
   if (backToWorksBtn) {
     backToWorksBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -561,7 +488,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Brand Name Click
   const brandHomeLink = document.getElementById('brandHomeLink');
   if (brandHomeLink) {
     brandHomeLink.addEventListener('click', (e) => {
@@ -572,7 +498,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle Initial Hash on Page Load
   function handleRouteHash() {
     const hash = window.location.hash;
     if (hash.startsWith('#project/')) {
@@ -588,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   handleRouteHash();
 
   // -------------------------------------------------------------------------
-  // 5. THEME SWITCHER (DEEP NAVY BLUEPRINT <--> WARM CONCRETE GREY)
+  // 5. THEME SWITCHER (NAVY BLUEPRINT <-> WARM CONCRETE)
   // -------------------------------------------------------------------------
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const mobileThemeToggleBtn = document.getElementById('mobileThemeToggleBtn');
@@ -612,7 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
   if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
 
-  // Load saved theme preference
   const savedTheme = localStorage.getItem('yitbarek_theme');
   if (savedTheme) {
     updateThemeUI(savedTheme);
@@ -627,7 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!clockTimeElement) return;
     try {
       const now = new Date();
-      // Format to Addis Ababa Timezone (Africa/Addis_Ababa, UTC+3)
       const options = {
         timeZone: 'Africa/Addis_Ababa',
         hour: '2-digit',
@@ -638,7 +561,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const timeString = new Intl.DateTimeFormat('en-GB', options).format(now);
       clockTimeElement.textContent = `${timeString} EAT`;
     } catch (e) {
-      // Fallback
       const now = new Date();
       const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
       const eatTime = new Date(utc + (3600000 * 3));
@@ -649,14 +571,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateAddisTime, 1000);
   updateAddisTime();
 
-  // Dynamic Copyright Year
   const currentYearEl = document.getElementById('currentYear');
   if (currentYearEl) {
     currentYearEl.textContent = new Date().getFullYear();
   }
 
   // -------------------------------------------------------------------------
-  // 7. CV MODAL HANDLERS
+  // 7. CV SPECIFICATION MODAL
   // -------------------------------------------------------------------------
   const cvModal = document.getElementById('cvModal');
   const openCvBtn = document.getElementById('openCvBtn');
@@ -665,7 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openCv() {
     if (cvModal) {
-      cvModal.classList.add('open');
+      cvModal.classList.add('is-open');
       cvModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
@@ -673,7 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeCv() {
     if (cvModal) {
-      cvModal.classList.remove('open');
+      cvModal.classList.remove('is-open');
       cvModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
@@ -694,16 +615,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 8. MOBILE DRAWER NAVIGATION
+  // 8. MOBILE NAVIGATION DRAWER
   // -------------------------------------------------------------------------
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const drawerCloseBtn = document.getElementById('drawerCloseBtn');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile_nav_link');
 
   function openDrawer() {
     if (mobileDrawer) {
-      mobileDrawer.classList.add('open');
+      mobileDrawer.classList.add('is-open');
       mobileDrawer.setAttribute('aria-hidden', 'false');
       mobileMenuToggle.setAttribute('aria-expanded', 'true');
     }
@@ -711,7 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeDrawer() {
     if (mobileDrawer) {
-      mobileDrawer.classList.remove('open');
+      mobileDrawer.classList.remove('is-open');
       mobileDrawer.setAttribute('aria-hidden', 'true');
       mobileMenuToggle.setAttribute('aria-expanded', 'false');
     }
@@ -730,7 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -------------------------------------------------------------------------
-  // 9. TRANSMITTAL CONTACT FORM HANDLER
+  // 9. TRANSMITTAL CONTACT FORM
   // -------------------------------------------------------------------------
   const contactForm = document.getElementById('contactForm');
   const formNotice = document.getElementById('formNotice');
@@ -754,7 +675,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate formal architectural transmittal transmission
       if (submitFormBtn) {
         submitFormBtn.disabled = true;
         submitFormBtn.querySelector('span').textContent = 'TRANSMITTING BRIEF...';
@@ -774,7 +694,7 @@ document.addEventListener('DOMContentLoaded', () => {
           formStatusIndicator.style.color = '#34D399';
         }
         if (formNotice) {
-          formNotice.textContent = `THANK YOU ${name.toUpperCase()}. TRANSMITTAL CONFIRMED FOR ${type.toUpperCase()}. WE WILL RESPOND WITHIN 24 HOURS.`;
+          formNotice.textContent = `THANK YOU ${name.toUpperCase()}. TRANSMITTAL CONFIRMED FOR ${type.toUpperCase()}. STUDIO RESPONSE WITHIN 24 HOURS.`;
           formNotice.style.color = 'var(--accent)';
         }
         contactForm.reset();
@@ -783,9 +703,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------------
-  // 10. SMOOTH SCROLL NAVIGATION HIGHLIGHTING
+  // 10. ACTIVE NAVIGATION TRACKER
   // -------------------------------------------------------------------------
-  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  const navLinks = document.querySelectorAll('.nav_menu .nav_link');
   const sections = document.querySelectorAll('section[id]');
 
   window.addEventListener('scroll', () => {
@@ -798,9 +718,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('active');
+      link.classList.remove('is-active');
       if (link.getAttribute('data-nav') === current) {
-        link.classList.add('active');
+        link.classList.add('is-active');
       }
     });
   });
