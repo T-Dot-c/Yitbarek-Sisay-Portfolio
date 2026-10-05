@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yitbarek Sisay — Senior Architect & Interior Designer | Addis Ababa</title>
+  <meta name="description" content="Portfolio of Yitbarek Sisay, Senior Architect & Interior Designer based in Addis Ababa, Ethiopia. Specializing in BIM, creative space planning, residential, healthcare, cultural, and interior architecture.">
+  <meta name="author" content="Yitbarek Sisay">
+  
+  <!-- Typography: Space Grotesk & JetBrains Mono / Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Blueprint Grid Canvas Background (Subtle interactive overlay) -->
+  <div class="site-ambient-grid" aria-hidden="true"></div>
+
+  <!-- Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#home" class="brand-identity" id="brandHomeLink">
+        <span class="brand-name">YITBAREK SISAY</span>
+        <span class="brand-title">SENIOR ARCHITECT &amp; INTERIOR DESIGNER</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#works" class="nav-link" data-nav="works">Works</a></li>
+          <li><a href="#expertise" class="nav-link" data-nav="expertise">Expertise</a></li>
+          <li><a href="#experience" class="nav-link" data-nav="experience">Experience</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Theme Switcher -->
+          <button class="theme-toggle-btn" id="themeToggleBtn" title="Toggle Blueprint Navy / Warm Concrete theme" aria-label="Toggle Theme">
+            <span class="theme-indicator"></span>
+            <span class="theme-label mono-label" id="themeLabel">NAVY / CONCRETE</span>
+          </button>
+
+          <a href="#contact" class="btn btn-primary btn-sm header-cta">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <div class="mobile-drawer-header">
+          <span class="mono-label">NAVIGATION // INDEX</span>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Navigation Menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#works" class="mobile-nav-link"><span>01</span> Works</a></li>
+          <li><a href="#expertise" class="mobile-nav-link"><span>02</span> Expertise</a></li>
+          <li><a href="#experience" class="mobile-nav-link"><span>03</span> Experience</a></li>
+          <li><a href="#contact" class="mobile-nav-link"><span>04</span> Contact</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <div class="mobile-theme-row">
+            <span class="mono-label">THEME</span>
+            <button class="theme-toggle-btn" id="mobileThemeToggleBtn">
+              <span class="theme-indicator"></span>
+              <span class="theme-label mono-label" id="mobileThemeLabel">NAVY // CONCRETE</span>
+            </button>
+          </div>
+          <div class="mobile-contact-quick">
+            <a href="tel:+251968906598" class="mono-label">+251 968 906 598</a>
+            <a href="mailto:yitbareksisay7@gmail.com" class="mono-label">yitbareksisay7@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="appRoot">
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 1: HOME PAGE (DESKTOP & MOBILE RESPONSIVE) -->
+    <!-- ========================================================================= -->
+    <div id="homeView" class="view-section active">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="section-container hero-grid">
+          
+          <!-- Left Column: Hero Content -->
+          <div class="hero-content">
+            <div class="hero-tag mono-tag">
+              <span class="tag-bullet"></span>
+              BA ARCHITECTURE / DILLA UNIVERSITY
+            </div>
+            
+            <h1 class="hero-headline">
+              Architecture and interiors, drawn by hand and built in BIM.
+            </h1>
+            
+            <p class="hero-intro">
+              Specialized in holistic spatial planning, contextual architectural design, and rigorous BIM execution. Bridging team collaboration and engineering precision to transform conceptual vision into built reality across Addis Ababa and beyond.
+            </p>
+            
+            <div class="hero-cta-group">
+              <a href="#works" class="btn btn-accent" id="heroWorksBtn">View Selected Works</a>
+              <button class="btn btn-outline" id="openCvBtn" type="button">Download CV</button>
+            </div>
+
+            <div class="hero-spec-strip mono-caption">
+              <div class="spec-cell">
+                <span class="spec-label">LOCATION</span>
+                <span class="spec-val">ADDIS ABABA, ET</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">EXPERIENCE</span>
+                <span class="spec-val">10+ YEARS</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">STATUS</span>
+                <span class="spec-val text-accent">AVAILABLE FOR COMMISSIONS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Hero Sheet Frame with Corner Crop Marks -->
+          <div class="hero-visual">
+            <div class="sheet-frame hero-sheet" data-interactive-blueprint="true">
+              <!-- Corner Crop Marks (Drafting style) -->
+              <span class="crop-mark crop-tl"></span>
+              <span class="crop-mark crop-tr"></span>
+              <span class="crop-mark crop-bl"></span>
+              <span class="crop-mark crop-br"></span>
+              
+              <!-- Blueprint Overlay inside frame on hover -->
+              <div class="blueprint-grid-overlay"></div>
+              
+              <!-- Render Artwork / Visual Frame -->
+              <div class="render-canvas hero-canvas">
+                <svg viewBox="0 0 700 500" class="arch-svg-render" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Architectural Isometric Drafting Vector -->
+                  <defs>
+                    <pattern id="draftGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.12"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="var(--panel-bg)" />
+                  <rect width="100%" height="100%" fill="url(#draftGrid)" />
+                  
+                  <!-- Architectural Volume Elevation / Axonometric Wireframe & Solids -->
+                  <g class="arch-massing" stroke="currentColor" stroke-width="1.2" opacity="0.85">
+                    <!-- Base Ground Plane Grid Lines -->
+                    <path d="M80,380 L350,470 L620,380 L350,290 Z" fill="none" stroke-dasharray="4 4" stroke-opacity="0.3" />
+                    
+                    <!-- Main Building Volumes -->
+                    <!-- Volume 1 (Left Cantilever) -->
+                    <path d="M140,260 L280,210 L280,360 L140,410 Z" fill="var(--panel-elevated)" fill-opacity="0.9" stroke="var(--text-primary)" />
+                    <path d="M280,210 L440,265 L440,415 L280,360 Z" fill="var(--panel-bg)" fill-opacity="0.8" stroke="var(--text-primary)" />
+                    <path d="M140,260 L300,205 L440,265 L280,320 Z" fill="var(--panel-elevated)" stroke="var(--text-primary)" />
+                    
+                    <!-- Tower Volume (Central Core) -->
+                    <path d="M320,110 L480,165 L480,390 L320,335 Z" fill="var(--panel-elevated)" stroke="var(--text-primary)" stroke-width="1.5" />
+                    <path d="M480,165 L590,125 L590,350 L480,390 Z" fill="var(--panel-bg)" stroke="var(--text-primary)" stroke-width="1.5" />
+                    <path d="M320,110 L430,70 L590,125 L480,165 Z" fill="var(--panel-elevated)" stroke="var(--text-primary)" />
+                    
+                    <!-- Glazing & Mullion Strips / Blueprint Accents -->
+                    <g stroke="var(--accent)" stroke-width="1" opacity="0.75">
+                      <line x1="160" y1="280" x2="260" y2="245" />
+                      <line x1="160" y1="310" x2="260" y2="275" />
+                      <line x1="160" y1="340" x2="260" y2="305" />
+                      <line x1="160" y1="370" x2="260" y2="335" />
+                      
+                      <line x1="350" y1="150" x2="450" y2="185" />
+                      <line x1="350" y1="180" x2="450" y2="215" />
+                      <line x1="350" y1="210" x2="450" y2="245" />
+                      <line x1="350" y1="240" x2="450" y2="275" />
+                      <line x1="350" y1="270" x2="450" y2="305" />
+                      <line x1="350" y1="300" x2="450" y2="335" />
+                    </g>
+                    
+                    <!-- Architectural Level Annotation Markers -->
+                    <g class="draft-levels" stroke="var(--accent)" stroke-width="0.8" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--accent)">
+                      <line x1="590" y1="125" x2="650" y2="125" stroke-dasharray="2 2" />
+                      <text x="655" y="128" stroke="none">+24.00 ROOF LVL</text>
+                      
+                      <line x1="590" y1="230" x2="650" y2="230" stroke-dasharray="2 2" />
+                      <text x="655" y="233" stroke="none">+12.00 MEZZANINE</text>
+
+                      <line x1="440" y1="415" x2="650" y2="415" stroke-dasharray="2 2" />
+                      <text x="655" y="418" stroke="none">±0.00 FINISHED GRD</text>
+                    </g>
+                    
+                    <!-- Dimension Line -->
+                    <g stroke="var(--text-secondary)" stroke-width="0.8" opacity="0.6">
+                      <line x1="140" y1="440" x2="440" y2="440" />
+                      <line x1="140" y1="435" x2="140" y2="445" />
+                      <line x1="440" y1="435" x2="440" y2="445" />
+                      <text x="290" y="455" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--text-secondary)" text-anchor="middle" stroke="none">36,400 mm [AXIS A-D]</text>
+                    </g>
+                  </g>
+                  
+                  <!-- Central Badge / Watermark -->
+                  <text x="30" y="40" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-secondary)" opacity="0.7">FIG. 00 // AXONOMETRIC BIM MASSING MODEL</text>
+                </svg>
+
+                <div class="render-badge mono-label">RENDER PLACEHOLDER // BIM MASSING</div>
+              </div>
+
+              <!-- Title Block Caption (Drafting Sheet Spec) -->
+              <div class="title-block-caption">
+                <div class="tb-item">
+                  <span class="tb-label">PROJECT</span>
+                  <span class="tb-value">ENTOTO CULTURAL PAVILION &amp; RESEARCH CENTER</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">SCALE</span>
+                  <span class="tb-value">1:100 @ A1</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">YEAR</span>
+                  <span class="tb-value">2024</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">SHEET REF</span>
+                  <span class="tb-value text-accent">A-101 // MASSING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- WORKS PREVIEW SECTION -->
+      <!-- ========================================================================= -->
+      <section class="section-works" id="works">
+        <div class="section-container">
+          
+          <div class="section-header-bar">
+            <div>
+              <span class="section-num mono-label">01 // PORTFOLIO</span>
+              <h2 class="section-title">Selected Works</h2>
+            </div>
+            <p class="section-subtext">
+              Comprehensive architectural typologies spanning public landmarks, bespoke residential sanctuaries, institutional health facilities, and refined interior spatial systems.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="filters-container">
+            <div class="filter-pills" id="workFilters" role="tablist">
+              <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+              <button class="filter-btn" data-filter="residential" role="tab" aria-selected="false">RESIDENTIAL</button>
+              <button class="filter-btn" data-filter="public-cultural" role="tab" aria-selected="false">PUBLIC &amp; CULTURAL</button>
+              <button class="filter-btn" data-filter="healthcare-schools" role="tab" aria-selected="false">HEALTHCARE &amp; SCHOOLS</button>
+              <button class="filter-btn" data-filter="interior" role="tab" aria-selected="false">INTERIOR</button>
+            </div>
+            <div class="filter-count mono-label" id="projectCountDisplay">SHOWING 6 OF 6 PROJECTS</div>
+          </div>
+
+          <!-- 2-Column Works Grid -->
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Project Cards are dynamically rendered from app.js with rich fallback static markup -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- EXPERTISE SECTION (3x2 Bordered Grid) -->
+      <!-- ========================================================================= -->
+      <section class="section-expertise" id="expertise">
+        <div class="section-container">
+          
+          <div class="section-header-bar">
+            <div>
+              <span class="section-num mono-label">02 // CAPABILITIES</span>
+              <h2 class="section-title">Expertise &amp; Discipline</h2>
+            </div>
+            <p class="section-subtext">
+              Rigorous synthesis of advanced technical computation, computational BIM workflows, hand-crafted architectural intuition, and multidisciplinary coordination.
+            </p>
+          </div>
+
+          <!-- 3x2 Grid -->
+          <div class="expertise-grid">
+            
+            <!-- Box 1: BIM & CAD -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-01</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">BIM &amp; CAD</h3>
+              <p class="exp-description">
+                Building Information Modeling from schematic phase to construction documents, clash detection, LOD 350 parametric modeling, and coordinated parametric drawings.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Revit</li>
+                <li><span>//</span> ArchiCAD</li>
+                <li><span>//</span> AutoCAD</li>
+                <li><span>//</span> SketchUp</li>
+              </ul>
+            </div>
+
+            <!-- Box 2: Visualization -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-02</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">Visualization</h3>
+              <p class="exp-description">
+                Photorealistic daylight simulations, atmospheric interior lighting, architectural animation, material texturing, and high-impact design presentations.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Lumion</li>
+                <li><span>//</span> D5 Render</li>
+                <li><span>//</span> V-Ray</li>
+                <li><span>//</span> Photoshop &amp; Illustrator</li>
+              </ul>
+            </div>
+
+            <!-- Box 3: Manual Craft -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-03</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">Manual Craft</h3>
+              <p class="exp-description">
+                Physical conceptualization through precise freehand architectural drafting, conceptual axonometric sketching, physical balsa/foam modeling, and spatial painting.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Architectural Drafting</li>
+                <li><span>//</span> Conceptual Sketching</li>
+                <li><span>//</span> Physical Scale Models</li>
+                <li><span>//</span> Mixed Media Painting</li>
+              </ul>
+            </div>
+
+            <!-- Box 4: Design Focus -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-04</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">Design Focus</h3>
+              <p class="exp-description">
+                End-to-end architectural typologies from master planning and multi-family residential towers to cultural institutions, healthcare complexes, and environmental HVAC integration.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Multi-Family Apartments</li>
+                <li><span>//</span> Schools &amp; Educational</li>
+                <li><span>//</span> Cultural Centers &amp; Museums</li>
+                <li><span>//</span> Hospitals &amp; Healthcare</li>
+                <li><span>//</span> HVAC &amp; Passive Systems</li>
+                <li><span>//</span> Spatial &amp; Identity Design</li>
+              </ul>
+            </div>
+
+            <!-- Box 5: Working Style -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-05</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">Working Style</h3>
+              <p class="exp-description">
+                Structured leadership, collaborative stakeholder alignment, cross-engineering coordination (structural/MEP), site supervision, and disciplined milestone delivery.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Project Leadership</li>
+                <li><span>//</span> Client &amp; Team Communication</li>
+                <li><span>//</span> Design Presentations</li>
+                <li><span>//</span> Rigorous Time Management</li>
+              </ul>
+            </div>
+
+            <!-- Box 6: Languages -->
+            <div class="expertise-card">
+              <div class="card-header">
+                <span class="mono-label exp-code">EXP-06</span>
+                <span class="card-accent-line"></span>
+              </div>
+              <h3 class="exp-title">Languages</h3>
+              <p class="exp-description">
+                Fluent communication for international collaboration, local Ethiopian regulatory filings, technical documentation, and contractor coordination.
+              </p>
+              <ul class="exp-tools-list mono-label">
+                <li><span>//</span> Amharic (Native / Primary)</li>
+                <li><span>//</span> English (Professional Working Proficiency)</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- EXPERIENCE SECTION (Vertical Timeline) -->
+      <!-- ========================================================================= -->
+      <section class="section-experience" id="experience">
+        <div class="section-container">
+          
+          <div class="section-header-bar">
+            <div>
+              <span class="section-num mono-label">03 // CAREER CHRONOLOGY</span>
+              <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <p class="section-subtext">
+              Over a decade of continuous practice delivering architectural monuments, bespoke interiors, and client-centric solutions across Ethiopia.
+            </p>
+          </div>
+
+          <!-- Vertical Timeline with Hairline Rule -->
+          <div class="timeline-container">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-meta mono-label">
+                  <span class="timeline-period">2015 &mdash; PRESENT</span>
+                  <span class="timeline-badge text-accent">LEAD ARCHITECT / INTERIOR</span>
+                </div>
+                <h3 class="timeline-role">Lead Architect &amp; Interior Designer</h3>
+                <h4 class="timeline-org">Elevate Interior Design &bull; Addis Ababa, Ethiopia</h4>
+                <p class="timeline-body">
+                  Leading multi-disciplinary architectural and luxury interior projects from conceptual inception through on-site execution. Managing client presentations, full BIM modeling, millwork custom details, contractor coordination, and material selection across commercial and high-end residential briefs.
+                </p>
+                <div class="timeline-tags mono-label">
+                  <span>Revit BIM</span>
+                  <span>Spatial Planning</span>
+                  <span>Interior Details</span>
+                  <span>Team Leadership</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-meta mono-label">
+                  <span class="timeline-period">2014 &mdash; PRESENT</span>
+                  <span class="timeline-badge">PRINCIPAL ARCHITECT</span>
+                </div>
+                <h3 class="timeline-role">Principal &amp; Independent Architectural Practice</h3>
+                <h4 class="timeline-org">Freelance Practice &bull; Addis Ababa, Ethiopia</h4>
+                <p class="timeline-body">
+                  Commissioned by private clients, commercial developers, and institutional bodies for custom residential villas, school expansions, healthcare facility planning, and bespoke brand spaces. Directing spatial feasibility, municipal permitting, and 3D visualization.
+                </p>
+                <div class="timeline-tags mono-label">
+                  <span>Custom Residential</span>
+                  <span>Permitting</span>
+                  <span>Feasibility Studies</span>
+                  <span>V-Ray / D5</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <div class="marker-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-meta mono-label">
+                  <span class="timeline-period">2013 &mdash; 2014</span>
+                  <span class="timeline-badge">PRACTICE INTERNSHIP</span>
+                </div>
+                <h3 class="timeline-role">Architectural Intern</h3>
+                <h4 class="timeline-org">BTF Consulting &bull; Addis Ababa, Ethiopia</h4>
+                <p class="timeline-body">
+                  Assisted senior architects with AutoCAD working drawings, physical site documentation, schematic design drafting, structural coordination, and 3D modeling for public infrastructure competitions.
+                </p>
+                <div class="timeline-tags mono-label">
+                  <span>AutoCAD Drafting</span>
+                  <span>Site Surveys</span>
+                  <span>Scale Modeling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 4: Education -->
+            <div class="timeline-item timeline-edu">
+              <div class="timeline-marker">
+                <div class="marker-dot edu-dot"></div>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-meta mono-label">
+                  <span class="timeline-period">GRADUATED</span>
+                  <span class="timeline-badge text-accent">ACADEMIC FOUNDATION</span>
+                </div>
+                <h3 class="timeline-role">Bachelor of Architecture (BA Architecture)</h3>
+                <h4 class="timeline-org">Dilla University &bull; Dilla, Ethiopia</h4>
+                <p class="timeline-body">
+                  Comprehensive 5-year architectural curriculum encompassing architectural theory, urban design, structural mechanics, HVAC &amp; environmental building systems, building economics, and hand drafting masterclasses.
+                </p>
+                <div class="timeline-tags mono-label">
+                  <span>Architectural Design</span>
+                  <span>Urban Planning</span>
+                  <span>Building Science</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================= -->
+      <!-- CONTACT SECTION -->
+      <!-- ========================================================================= -->
+      <section class="section-contact" id="contact">
+        <div class="section-container">
+          
+          <div class="contact-layout-grid">
+            
+            <!-- Left Info Column -->
+            <div class="contact-info-col">
+              <span class="section-num mono-label">04 // COMMISSIONS &amp; INQUIRIES</span>
+              <h2 class="contact-headline">Ready to bring spatial concepts to reality.</h2>
+              <p class="contact-intro">
+                Available for architecture commissions, interior design mandates, BIM consulting, and collaborative project leadership across Ethiopia and internationally.
+              </p>
+
+              <div class="contact-channels">
+                <div class="contact-channel-item">
+                  <span class="channel-label mono-label">DIRECT PHONE</span>
+                  <a href="tel:+251968906598" class="channel-value mono-val">+251 968 906 598</a>
+                </div>
+                <div class="contact-channel-item">
+                  <span class="channel-label mono-label">ELECTRONIC MAIL</span>
+                  <a href="mailto:yitbareksisay7@gmail.com" class="channel-value mono-val">yitbareksisay7@gmail.com</a>
+                </div>
+                <div class="contact-channel-item">
+                  <span class="channel-label mono-label">STUDIO LOCATION</span>
+                  <span class="channel-value">Addis Ababa, Ethiopia</span>
+                </div>
+              </div>
+
+              <div class="references-note mono-caption">
+                <span class="ref-icon">&sect;</span>
+                <span>References, full portfolio sheets &amp; client testimonials available on request.</span>
+              </div>
+            </div>
+
+            <!-- Right Form Column -->
+            <div class="contact-form-col">
+              <div class="form-sheet-frame">
+                <!-- Corner Marks -->
+                <span class="crop-mark crop-tl"></span>
+                <span class="crop-mark crop-tr"></span>
+                <span class="crop-mark crop-bl"></span>
+                <span class="crop-mark crop-br"></span>
+
+                <form class="contact-form" id="contactForm" autocomplete="off">
+                  <div class="form-header">
+                    <span class="mono-label">TRANSMITTAL FORM // REF-2026</span>
+                    <span class="form-status-indicator" id="formStatusIndicator">READY</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userName" class="mono-label">YOUR NAME *</label>
+                    <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. Elias Bekele" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userEmail" class="mono-label">EMAIL ADDRESS *</label>
+                    <input type="email" id="userEmail" name="email" class="form-input" placeholder="e.g. elias@organization.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="projectType" class="mono-label">PROJECT TYPOLOGY</label>
+                    <div class="select-wrapper">
+                      <select id="projectType" name="projectType" class="form-select">
+                        <option value="Residential Architecture">Residential Villa / Apartment</option>
+                        <option value="Commercial & Office">Commercial &amp; Office Building</option>
+                        <option value="Public & Cultural">Public / Cultural Landmark</option>
+                        <option value="Healthcare & Institutional">Healthcare / School Facility</option>
+                        <option value="Interior Architecture">Luxury Interior Design</option>
+                        <option value="BIM & Technical Consulting">BIM / Computational Consultation</option>
+                        <option value="Other Inquiries">Other Inquiries</option>
+                      </select>
+                      <span class="select-arrow">&darr;</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userMessage" class="mono-label">PROJECT BRIEF / MESSAGE *</label>
+                    <textarea id="userMessage" name="message" class="form-textarea" rows="4" placeholder="Describe site location, timeline, spatial scale, and key design aspirations..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-accent btn-full" id="submitFormBtn">
+                    <span>Send Message</span>
+                    <span class="btn-arrow">&rarr;</span>
+                  </button>
+
+                  <div class="form-notice mono-caption" id="formNotice" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- End #homeView -->
+
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 2: PROJECT DETAIL PAGE (SCREEN 2 CASE STUDY) -->
+    <!-- ========================================================================= -->
+    <div id="projectDetailView" class="view-section" style="display: none;">
+      <div class="section-container detail-container">
+        
+        <!-- Back Link & Top Meta Row -->
+        <div class="detail-nav-bar">
+          <a href="#works" class="back-link mono-label" id="backToWorksBtn">
+            <span class="back-arrow">&larr;</span> ALL WORKS
+          </a>
+          <div class="detail-top-meta mono-label" id="detailPrjTag">
+            PRJ-01 // 2024 // PUBLIC &amp; CULTURAL
+          </div>
+        </div>
+
+        <!-- Project Title & One-line Summary -->
+        <div class="detail-heading-block">
+          <h1 class="detail-title" id="detailTitle">Entoto Cultural Pavilion &amp; Research Center</h1>
+          <p class="detail-summary" id="detailSummary">A landmark cultural repository celebrating Ethiopian spatial heritage through contemporary rammed earth, timber louvers, and parametric daylight envelopes.</p>
+        </div>
+
+        <!-- Full-Width Hero Image Frame with Corner Crop Marks & Blueprint Overlay -->
+        <div class="sheet-frame detail-hero-frame" data-interactive-blueprint="true">
+          <span class="crop-mark crop-tl"></span>
+          <span class="crop-mark crop-tr"></span>
+          <span class="crop-mark crop-bl"></span>
+          <span class="crop-mark crop-br"></span>
+          
+          <div class="blueprint-grid-overlay"></div>
+          
+          <div class="render-canvas detail-hero-canvas" id="detailHeroRender">
+            <!-- Dynamic SVG or Visual injected by JS -->
+          </div>
+
+          <div class="title-block-caption detail-caption">
+            <div class="tb-item">
+              <span class="tb-label">FIGURE</span>
+              <span class="tb-value" id="detailFigLabel">FIG 01 // EXTERIOR DAYLIGHT COMPOSITION</span>
+            </div>
+            <div class="tb-item">
+              <span class="tb-label">SITE</span>
+              <span class="tb-value" id="detailSite">ENTOTO RIDGE, ADDIS ABABA</span>
+            </div>
+            <div class="tb-item">
+              <span class="tb-label">SCALE</span>
+              <span class="tb-value" id="detailScale">1:200 @ A0</span>
+            </div>
+            <div class="tb-item">
+              <span class="tb-label">CLASSIFICATION</span>
+              <span class="tb-value text-accent">RENDER PLACEHOLDER</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Column Spec Table -->
+        <div class="spec-table-container">
+          <table class="spec-table">
+            <thead>
+              <tr class="mono-label">
+                <th>TYPOLOGY</th>
+                <th>ROLE</th>
+                <th>SOFTWARE &amp; TOOLS</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="specTypology">Public &amp; Cultural Landmark</td>
+                <td id="specRole">Lead Architect &amp; BIM Specialist</td>
+                <td id="specSoftware">Revit, D5 Render, V-Ray, AutoCAD</td>
+                <td id="specStatus" class="text-accent">Completed Design &amp; Tender</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Alternating Editorial Blocks -->
+        <div class="editorial-flow">
+          
+          <!-- Block 1: Text column beside an image -->
+          <div class="editorial-block block-split">
+            <div class="split-text">
+              <span class="mono-label block-eyebrow">01 // CONCEPTUAL STRATEGY</span>
+              <h3 class="split-title" id="detailConceptTitle">Topographic Integration &amp; Passive Microclimate</h3>
+              <p id="detailConceptP1">
+                The architecture emerges from the natural slope of the plateau, utilizing locally sourced basalt and compressed earth blocks to anchor the massing. The deep-set loggias shield the interior galleries from Addis Ababa's intense high-altitude solar radiation while capturing northern ambient daylight.
+              </p>
+              <p id="detailConceptP2">
+                A central atrium acts as a natural thermal chimney, inducing passive stack ventilation across all exhibition levels and reducing active HVAC energy requirements by 42%.
+              </p>
+              <div class="spec-inline-tags mono-label" id="detailTagsList">
+                <span>Passive Ventilation</span>
+                <span>Parametric Louvers</span>
+                <span>BIM LOD 350</span>
+              </div>
+            </div>
+            
+            <div class="split-visual">
+              <div class="sheet-frame" data-interactive-blueprint="true">
+                <span class="crop-mark crop-tl"></span>
+                <span class="crop-mark crop-tr"></span>
+                <span class="crop-mark crop-bl"></span>
+                <span class="crop-mark crop-br"></span>
+                <div class="blueprint-grid-overlay"></div>
+                <div class="render-canvas" id="detailSplitRender">
+                  <!-- Injected by JS -->
+                </div>
+                <div class="render-badge mono-label">RENDER PLACEHOLDER // DETAIL VIEW</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 2: Full-bleed render / section with blueprint inspection overlay -->
+          <div class="editorial-block block-fullbleed">
+            <div class="block-header">
+              <span class="mono-label">02 // ATMOSPHERIC RENDERING</span>
+              <h3 class="split-title">Full-Bleed Materiality &amp; Daylight Ingress</h3>
+            </div>
+            <div class="sheet-frame fullbleed-frame" data-interactive-blueprint="true">
+              <span class="crop-mark crop-tl"></span>
+              <span class="crop-mark crop-tr"></span>
+              <span class="crop-mark crop-bl"></span>
+              <span class="crop-mark crop-br"></span>
+              <div class="blueprint-grid-overlay"></div>
+              <div class="render-canvas fullbleed-canvas" id="detailFullBleedRender">
+                <!-- Injected by JS -->
+              </div>
+              <div class="title-block-caption">
+                <div class="tb-item">
+                  <span class="tb-label">STUDY</span>
+                  <span class="tb-value">DAYLIGHT PENETRATION AT EQUINOX (12:00 PM)</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">LUMEN OUTPUT</span>
+                  <span class="tb-value">350 LUX AMBIENT GALLERY</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">STATUS</span>
+                  <span class="tb-value text-accent">RENDER PLACEHOLDER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 3: 2-image row -->
+          <div class="editorial-block block-duo">
+            <div class="block-header">
+              <span class="mono-label">03 // COMPARATIVE STUDIES</span>
+              <h3 class="split-title">Spatial Diptych: Day vs Night Lighting Ambience</h3>
+            </div>
+            <div class="duo-grid">
+              <div class="sheet-frame" data-interactive-blueprint="true">
+                <span class="crop-mark crop-tl"></span>
+                <span class="crop-mark crop-tr"></span>
+                <span class="crop-mark crop-bl"></span>
+                <span class="crop-mark crop-br"></span>
+                <div class="blueprint-grid-overlay"></div>
+                <div class="render-canvas duo-canvas" id="detailDuoRender1">
+                  <!-- Injected by JS -->
+                </div>
+                <div class="title-block-caption compact">
+                  <span class="tb-label">VIEW A</span>
+                  <span class="tb-value">NORTH WING DAYLIGHT</span>
+                </div>
+              </div>
+
+              <div class="sheet-frame" data-interactive-blueprint="true">
+                <span class="crop-mark crop-tl"></span>
+                <span class="crop-mark crop-tr"></span>
+                <span class="crop-mark crop-bl"></span>
+                <span class="crop-mark crop-br"></span>
+                <div class="blueprint-grid-overlay"></div>
+                <div class="render-canvas duo-canvas" id="detailDuoRender2">
+                  <!-- Injected by JS -->
+                </div>
+                <div class="title-block-caption compact">
+                  <span class="tb-label">VIEW B</span>
+                  <span class="tb-value">EVENING COVE ILLUMINATION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Block 4: Drawing / Plan image with caption -->
+          <div class="editorial-block block-drawing">
+            <div class="block-header">
+              <span class="mono-label">04 // TECHNICAL DRAWING</span>
+              <h3 class="split-title">BIM Floor Plan &amp; Spatial Circulation Matrix</h3>
+            </div>
+            <div class="sheet-frame drawing-frame" data-interactive-blueprint="true">
+              <span class="crop-mark crop-tl"></span>
+              <span class="crop-mark crop-tr"></span>
+              <span class="crop-mark crop-bl"></span>
+              <span class="crop-mark crop-br"></span>
+              <div class="blueprint-grid-overlay"></div>
+              <div class="render-canvas drawing-canvas" id="detailPlanRender">
+                <!-- Injected by JS -->
+              </div>
+              <div class="title-block-caption">
+                <div class="tb-item">
+                  <span class="tb-label">DRAWING TITLE</span>
+                  <span class="tb-value" id="detailDrawingTitle">LEVEL +01 MAIN GALLERIES &amp; AUDITORIUM PLAN</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">SHEET NUMBER</span>
+                  <span class="tb-value" id="detailSheetNum">A-201</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">SCALE</span>
+                  <span class="tb-value">1:100</span>
+                </div>
+                <div class="tb-item">
+                  <span class="tb-label">DISCIPLINE</span>
+                  <span class="tb-value text-accent">ARCHITECTURAL BIM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End .editorial-flow -->
+
+        <!-- Bottom: Next Project Strip -->
+        <div class="next-project-strip" id="nextProjectStrip">
+          <div class="next-prj-inner">
+            <span class="mono-label next-label">NEXT PROJECT &rarr;</span>
+            <div class="next-prj-title-row">
+              <h2 class="next-prj-title" id="nextPrjTitle">Bole Luxury Penthouse &amp; Sky Lounge</h2>
+              <span class="next-arrow-btn" aria-hidden="true">&rarr;</span>
+            </div>
+            <span class="mono-label next-typology" id="nextPrjTypology">PRJ-02 // INTERIOR ARCHITECTURE</span>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- End #projectDetailView -->
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- CV / RESUME MODAL VIEWER -->
+  <!-- ========================================================================= -->
+  <div class="cv-modal-backdrop" id="cvModal" aria-hidden="true">
+    <div class="cv-modal-dialog">
+      <div class="cv-sheet-frame">
+        <span class="crop-mark crop-tl"></span>
+        <span class="crop-mark crop-tr"></span>
+        <span class="crop-mark crop-bl"></span>
+        <span class="crop-mark crop-br"></span>
+
+        <div class="cv-modal-header">
+          <div>
+            <span class="mono-label">CURRICULUM VITAE // SPEC-2026</span>
+            <h2 class="cv-modal-name">YITBAREK SISAY</h2>
+            <span class="mono-caption text-accent">SENIOR ARCHITECT &bull; ADDIS ABABA, ETHIOPIA</span>
+          </div>
+          <button class="cv-close-btn" id="cvCloseBtn" aria-label="Close CV Dialog">&times;</button>
+        </div>
+
+        <div class="cv-modal-body">
+          <div class="cv-section">
+            <h3 class="cv-section-title mono-label">// 01 EXECUTIVE SUMMARY</h3>
+            <p class="cv-text">
+              Senior Architect and Interior Designer with over 10 years of progressive practice in Ethiopia. Proven track record managing complex building programs from schematic conceptual hand drafting to BIM execution (Revit/ArchiCAD) and site administration. Recognized for contextual elegance, team leadership, and spatial efficiency.
+            </p>
+          </div>
+
+          <div class="cv-section">
+            <h3 class="cv-section-title mono-label">// 02 EDUCATION</h3>
+            <div class="cv-entry">
+              <div class="cv-entry-row">
+                <strong>Bachelor of Architecture (BA Architecture)</strong>
+                <span class="mono-caption">Dilla University</span>
+              </div>
+              <p class="cv-text">Rigorous 5-year degree in Architectural Design, Building Technology, Structural Principles, and Environmental Systems.</p>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3 class="cv-section-title mono-label">// 03 CORE COMPETENCIES &amp; SOFTWARE</h3>
+            <div class="cv-skills-grid mono-label">
+              <div class="cv-skill-item"><strong>BIM &amp; CAD:</strong> Revit, ArchiCAD, AutoCAD, SketchUp</div>
+              <div class="cv-skill-item"><strong>Visualization:</strong> Lumion, D5 Render, V-Ray, Photoshop</div>
+              <div class="cv-skill-item"><strong>Manual Craft:</strong> Drafting, Sketching, Model Making, Painting</div>
+              <div class="cv-skill-item"><strong>Building Systems:</strong> HVAC Integration, Passive Climatology, MEP Coordination</div>
+              <div class="cv-skill-item"><strong>Leadership:</strong> Team Management, Stakeholder Negotiation, Site Supervision</div>
+              <div class="cv-skill-item"><strong>Languages:</strong> Amharic (Native), English (Professional)</div>
+            </div>
+          </div>
+
+          <div class="cv-section">
+            <h3 class="cv-section-title mono-label">// 04 WORK EXPERIENCE</h3>
+            <div class="cv-entry">
+              <div class="cv-entry-row">
+                <strong>Elevate Interior Design &mdash; Lead Architect &amp; Interior Designer</strong>
+                <span class="mono-caption">2015 &ndash; Present</span>
+              </div>
+              <p class="cv-text">Directing interior architecture, bespoke millwork, MEP coordination, and luxury commercial developments across Addis Ababa.</p>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-row">
+                <strong>Freelance Practice &mdash; Principal Architect</strong>
+                <span class="mono-caption">2014 &ndash; Present</span>
+              </div>
+              <p class="cv-text">Leading commissions for residential villas, educational facilities, healthcare buildings, and institutional competitions.</p>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-row">
+                <strong>BTF Consulting &mdash; Architectural Intern</strong>
+                <span class="mono-caption">2013 &ndash; 2014</span>
+              </div>
+              <p class="cv-text">Working drawings, site analysis, and presentation graphics for major commercial tenders.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-modal-footer">
+          <button class="btn btn-accent" id="printCvBtn">
+            <span>Print / Save as PDF</span>
+          </button>
+          <a href="mailto:yitbareksisay7@gmail.com?subject=Inquiry%20from%20Portfolio" class="btn btn-outline">
+            <span>Direct Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="section-container">
+      
+      <!-- Top Footer Grid -->
+      <div class="footer-top-grid">
+        
+        <div class="footer-col-brand">
+          <div class="brand-name">YITBAREK SISAY</div>
+          <div class="brand-title mono-label">SENIOR ARCHITECT &amp; INTERIOR DESIGNER</div>
+          <p class="footer-location mono-caption">ADDIS ABABA &bull; ETHIOPIA &bull; EAST AFRICA</p>
+        </div>
+
+        <div class="footer-col-contact mono-caption">
+          <div class="footer-label">// DIRECT INQUIRIES</div>
+          <a href="tel:+251968906598" class="footer-link">+251 968 906 598</a>
+          <a href="mailto:yitbareksisay7@gmail.com" class="footer-link">yitbareksisay7@gmail.com</a>
+        </div>
+
+        <div class="footer-col-time mono-caption">
+          <div class="footer-label">// LOCAL STUDIO TIME</div>
+          <div class="live-clock-display" id="addisClock">
+            <span class="clock-icon">&bull;</span>
+            <span id="clockTime">--:--:-- EAT</span>
+          </div>
+          <div class="clock-zone">UTC+3 &bull; ADDIS ABABA TIMEZONE</div>
+        </div>
+
+      </div>
+
+      <!-- Interests Strip -->
+      <div class="footer-interests-strip mono-caption">
+        <span class="interests-label">INTERESTS &amp; PURSUITS:</span>
+        <span class="interests-items">Music &bull; Photography &bull; Art &bull; Podcasts &bull; TED Talks &bull; Travel &bull; Reading</span>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar mono-caption">
+        <div class="copyright-text">
+          &copy; <span id="currentYear">2026</span> YITBAREK SISAY. ALL RIGHTS RESERVED.
+        </div>
+        <div class="footer-credits">
+          DESIGNED WITH ARCHITECTURAL PRECISION &bull; BIM &amp; SPATIAL EXCELLENCE
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
